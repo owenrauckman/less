@@ -1,9 +1,9 @@
 {
-  "name": "contentful-starter-gatsby-blog",
-  "description": "Contentful Gatsby Starter Blog",
+  "name": "less",
+  "description": "The less Blog",
   "private": true,
   "version": "0.0.1",
-  "author": "Contentful <opensource@contentful.com>",
+  "author": "Owen Rauckman",
   "bugs": {
     "url": "https://github.com/contentful/starter-gatsby-blog/issues"
   },
