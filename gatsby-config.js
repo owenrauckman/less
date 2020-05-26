@@ -33,9 +33,29 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-emotion",
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Playfair Display`,
+            variants: [`700`]
+          },
+          {
+            family: `Roboto`,
+            variants: [`400`]
+          },
+          {
+            family: `Gothic A1`,
+            variants: [`800`]
+          },
+        ],
+      },
+    }
   ],
 };
