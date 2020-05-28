@@ -1,0 +1,29 @@
+html,
+body {
+  font-family: "Roboto", Tahoma, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 1.65;
+  color: black;
+  background: #eee;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+a {
+  color: currentColor;
+}
