@@ -38,10 +38,13 @@ export const hamburgerContainer = css`
 `;
 
 export const letsTalk = css`
-  font-family: "Gothic A1", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.2rem;
-  letter-spacing: -1px;
-  margin-right: 30px;
+  @media screen and (min-width: ${config.breakpoints.tablet}px) {
+    letter-spacing: -1px;
+  }
+  /* margin-right: 30px; */
 `;

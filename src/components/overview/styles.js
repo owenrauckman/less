@@ -3,40 +3,59 @@ import * as config from "../../config";
 
 export const wrapper = css`
   width: 100%;
-  max-width: 600px;
+  min-height: 90vh;
   margin: 0 auto;
-  padding: 100px 20px 140px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   text-align: center;
+  background: #333;
+  position: relative;
+  overflow: hidden;
   @media screen and (min-width: ${config.breakpoints.phone}px) {
-    padding: 100px 20px;
+    height: 80vh;
   }
 `;
 
 export const heading = css`
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
-  margin: 0 0 30px 0;
-  text-align: center;
-  font-size: 6rem;
-  @media screen and (min-width: ${config.breakpoints.phone}px) {
-    font-size: 7.2rem;
+  padding: 0 20px;
+  text-align: left;
+  font-size: 4.2rem;
+  line-height: 5rem;
+  color: white;
+  @media screen and (min-width: ${config.breakpoints.tablet}px) {
+    font-size: 4.8rem;
+    line-height: 6rem;
+    max-width: 600px;
+    padding: 0 20px 0 100px;
   }
 `;
 
-export const callout = css`
-  font-size: 2.4rem;
-  line-height: 3.2rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: rgba(0, 0, 0, 0.5);
-  margin: 0 0 30px 0;
+export const circles = css`
+  width: 100%;
+  min-width: 1000px;
+  height: auto;
+  padding: 0 20px;
+  position: absolute;
+  left: 0;
+  bottom: 10vh;
+  @media screen and (min-width: ${config.breakpoints.tablet}px) {
+    padding: 0 100px;
+  }
 `;
 
-export const description = css`
-  font-size: 1.6rem;
-  line-height: 2.8rem;
-  font-family: "Roboto", sans-serif;
+export const year = css`
+  font-family: "Roboto", serif;
   font-weight: 400;
-  color: black;
-  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 10vh;
+  right: 20px;
+  color: white;
+  @media screen and (min-width: ${config.breakpoints.tablet}px) {
+    right: 100px;
+  }
 `;

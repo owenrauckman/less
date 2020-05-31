@@ -13,7 +13,7 @@ export const cup = css`
   }
   height: 100%;
   width: 100%;
-  fill: black;
+  fill: #333;
   transform: scaleY(1);
   transform-origin: 50% 80%;
   animation: animate 2s ease-in-out forwards;

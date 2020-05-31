@@ -44,18 +44,22 @@ module.exports = {
         fonts: [
           {
             family: `Playfair Display`,
-            variants: [`700`]
+            variants: [`700`],
           },
           {
             family: `Roboto`,
-            variants: [`400`]
+            variants: [`400`],
           },
           {
             family: `Gothic A1`,
-            variants: [`800`]
+            variants: [`800`],
+          },
+          {
+            family: "Poppins",
+            variants: [`600`, `700`],
           },
         ],
       },
-    }
+    },
   ],
 };
