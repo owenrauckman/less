@@ -10,6 +10,7 @@ export const heroWrapper = css`
   @media screen and (min-width: ${config.breakpoints.phone}px) {
     min-height: 600px;
     height: 80vh;
+    margin-bottom: 10vh;
   }
 `;
 
