@@ -3,11 +3,10 @@ import * as config from "../../config";
 
 export const heroWrapper = css`
   min-height: 400px;
-  height: 65vh;
+  height: 75vh;
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 10vh;
   @media screen and (min-width: ${config.breakpoints.phone}px) {
     min-height: 600px;
     height: 80vh;
@@ -72,7 +71,7 @@ export const readMoreContainer = (isAbsolute) => css`
   display: flex;
   text-decoration: none;
   & svg {
-    height: 1.6rem;
+    height: 1.2rem;
     width: 3rem;
     margin-top: 0.1rem;
     margin-left: 15px;
