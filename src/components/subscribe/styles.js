@@ -3,28 +3,26 @@ import * as config from "../../config";
 
 export const wrapper = css`
   width: calc(100% - 10vmin);
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 140px 0 100px 0;
+  max-width: 750px;
+  margin: 10vh auto 0 auto;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   flex-direction: column;
-  @media screen and (min-width: ${config.breakpoints.phone}px) {
+  outline: solid 1px #333;
+  padding: 40px;
+  @media screen and (min-width: ${config.breakpoints.tablet}px) {
+    padding: 50px;
     flex-direction: row;
-    padding: 180px 0;
   }
 `;
 
 export const heading = css`
-  font-family: "Gothic A1", serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   margin: 0 0 20px 0;
   font-size: 2.4rem;
-  @media screen and (min-width: ${config.breakpoints.phone}px) {
-    font-size: 3.6rem;
-    margin: 0 0 30px 0;
-  }
+  letter-spacing: -0.5px;
 `;
 
 export const flexChildLeft = css`
@@ -38,7 +36,7 @@ export const flexChildRight = css`
   justify-content: flex-end;
   width: 100%;
   margin-top: 20px;
-  @media screen and (min-width: ${config.breakpoints.phone}px) {
+  @media screen and (min-width: ${config.breakpoints.tablet}px) {
     margin-top: 0;
   }
 `;
@@ -47,9 +45,11 @@ export const inputContainer = css`
   background: #f1f1f1;
   height: 60px;
   width: 100%;
-  min-width: 300px;
   max-width: 500px;
   position: relative;
+  @media screen and (min-width: ${config.breakpoints.tablet}px) {
+    min-width: 300px;
+  }
 `;
 
 export const input = css`
@@ -75,8 +75,8 @@ export const arrow = css`
   top: calc(50% + 2px);
   transform: translateY(-50%);
   & svg {
-    height: 16px;
-    width: 16px;
+    height: 24px;
+    width: 24px;
   }
 `;
 
@@ -89,8 +89,7 @@ export const description = css`
   margin: 0;
   text-align: left;
   width: 100%;
-  @media screen and (min-width: ${config.breakpoints.phone}px) {
-    text-align: right;
-    max-width: 300px;
+  @media screen and (min-width: ${config.breakpoints.tablet}px) {
+    max-width: 240px;
   }
 `;

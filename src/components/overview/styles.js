@@ -47,9 +47,9 @@ export const circles = css`
 `;
 
 export const year = css`
-  font-family: "Roboto", serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   letter-spacing: 5px;
   position: absolute;
   top: 10vh;

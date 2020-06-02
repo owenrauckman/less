@@ -3,8 +3,10 @@ import * as styles from "./styles";
 
 export default () => (
   <section css={styles.wrapper}>
-    <h1 css={styles.heading}>A project exploring what it means to have less</h1>
-    <div css={styles.year}>2020X</div>
+    <h1 css={styles.heading}>
+      A project exploring what it means to have less.
+    </h1>
+    <div css={styles.year}>202X</div>
     <svg
       css={styles.circles}
       viewBox="0 0 8394 170"

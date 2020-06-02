@@ -1,11 +1,29 @@
 import { css } from "@emotion/core";
-// import * as config from "../../config";
+import * as config from "../../config";
 
 export const wrapper = css`
   width: calc(100% - 10vmin);
-  max-width: 1180px;
+  max-width: 750px;
   margin: 0 auto;
-  padding: 5vmin 0;
+  padding: 5vh 0;
+  position: relative;
+`;
+
+export const heading = css`
+  font-size: 4.8rem;
+  color: rgba(51, 51, 51, 0.1);
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  margin: 0;
+  display: none;
+  @media screen and (min-width: ${config.breakpoints.desktop}px) {
+    display: block;
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -17vw;
+    top: calc(10vh + 5vh + 65px);
+  }
 `;
 
 export const articleList = css`
@@ -15,27 +33,32 @@ export const articleList = css`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 1fr;
-  grid-gap: 5vmin;
+  grid-gap: 6vmin;
+  row-gap: 40px;
   justify-content: center;
+  padding: 5vh 0;
+  @media screen and (min-width: ${config.breakpoints.desktop}px) {
+    padding: 10vh 0;
+    row-gap: 6vmin;
+  }
 `;
 
 export const article = css`
   text-decoration: none;
   &:hover {
     & .article-preview-decorator {
-      background: black;
-      border-radius: 10px;
-      width: 10px;
-      height: 10px;
+      background: rgba(0, 0, 0, 0.1);
+      width: 80%;
     }
   }
 `;
 
 export const previewTitle = css`
   font-size: 2.4rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: -0.5px;
   font-weight: 700;
-  margin: 15px 0;
+  margin: 0;
 `;
 
 export const previewText = css`
@@ -54,14 +77,15 @@ export const decoratorContainer = css`
 
 export const decoratorIndex = css`
   min-width: 50px;
-  font-family: "Gothic A1", serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 2.4rem;
+  color: rgba(51, 51, 51, 0.2);
 `;
 
 export const decoratorBar = css`
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.2);
   height: 2px;
-  width: 100%;
+  width: 10px;
   transition: all 0.2s ease-in-out;
 `;

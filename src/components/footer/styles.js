@@ -3,7 +3,7 @@ import { css } from "@emotion/core";
 export const footer = css`
   height: 100px;
   width: 100%;
-  background: black;
+  background: #333;
 `;
 
 export const wrapper = css`

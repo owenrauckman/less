@@ -4,7 +4,8 @@ import { Link } from "gatsby";
 import * as styles from "./styles";
 
 export default ({ posts }) => (
-  <div css={styles.wrapper}>
+  <section css={styles.wrapper}>
+    <h1 css={styles.heading}>Articles</h1>
     <ul css={styles.articleList}>
       {posts.map((article, index) => {
         return (
@@ -31,5 +32,5 @@ export default ({ posts }) => (
         );
       })}
     </ul>
-  </div>
+  </section>
 );
