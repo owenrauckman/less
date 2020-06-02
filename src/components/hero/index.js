@@ -20,7 +20,10 @@ export default ({ person, posts }) => {
                 posts[activePost].node.description.childMarkdownRemark.html,
             }}
           ></div>
-          <Link to="/" css={styles.readMoreContainer(false)}>
+          <Link
+            to={`/blog/${posts[activePost].node.slug}`}
+            css={styles.readMoreContainer(false)}
+          >
             <span css={styles.readMoreText}>Read Article</span>
             <ArrowLeft />
           </Link>
@@ -38,7 +41,10 @@ export default ({ person, posts }) => {
             <div css={styles.boxRight}></div>
           </div>
         </div>
-        <Link to="/" css={styles.readMoreContainer(true)}>
+        <Link
+          to={`/blog/${posts[activePost].node.slug}`}
+          css={styles.readMoreContainer(true)}
+        >
           <span css={styles.readMoreText}>Read Article</span>
           <ArrowLeft />
         </Link>

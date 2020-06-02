@@ -2,10 +2,10 @@ import React from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import get from "lodash/get";
-import Img from "gatsby-image";
+import ArticleDetail from "../components/articleDetail/index";
+import Subscribe from "../components/subscribe/index";
+import Footer from "../components/footer/index";
 import Layout from "../components/layout/index";
-
-// import heroStyles from "../components/hero.module.css";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -13,31 +13,12 @@ class BlogPostTemplate extends React.Component {
     const siteTitle = get(this.props, "data.site.siteMetadata.title");
 
     return (
-      <Layout location={this.props.location}>
-        <div style={{ background: "#fff" }}>
+      <Layout location={this.props.location} isFixed={true}>
+        <div>
           <Helmet title={`${post.title} | ${siteTitle}`} />
-          {/* <div className={heroStyles.hero}>
-            <Img
-              className={heroStyles.heroImage}
-              alt={post.title}
-              fluid={post.heroImage.fluid}
-            />
-          </div> */}
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: "block",
-              }}
-            >
-              {post.publishDate}
-            </p>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
-          </div>
+          <ArticleDetail post={post} />
+          <Subscribe />
+          <Footer />
         </div>
       </Layout>
     );
@@ -52,7 +33,7 @@ export const pageQuery = graphql`
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
+        fluid(maxWidth: 1200, maxHeight: 800, resizingBehavior: SCALE) {
           ...GatsbyContentfulFluid_tracedSVG
         }
       }

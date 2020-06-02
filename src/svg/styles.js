@@ -19,6 +19,10 @@ export const cup = css`
   animation: animate 2s ease-in-out forwards;
 `;
 
+export const circle = css`
+  fill: #333;
+`;
+
 export const hamburger = css`
   width: 25px;
   cursor: pointer;

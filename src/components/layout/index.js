@@ -4,11 +4,11 @@ import Navigation from "../navigation/index";
 
 class Template extends React.Component {
   render() {
-    const { children } = this.props;
+    const { children, isFixed } = this.props;
 
     return (
       <Fragment>
-        <Navigation />
+        <Navigation isFixed={isFixed} />
         {children}
       </Fragment>
     );

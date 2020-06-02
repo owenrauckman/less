@@ -16,8 +16,8 @@ class RootIndex extends React.Component {
     const [author] = get(this, "props.data.allContentfulPerson.edges");
 
     return (
-      <Layout location={this.props.location}>
-        <div style={{ background: "#fff" }}>
+      <Layout location={this.props.location} isFixed={false}>
+        <div>
           <Helmet title={siteTitle} />
           <Hero data={author.node} posts={posts} />
           <Overview />

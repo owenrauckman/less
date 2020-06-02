@@ -1,10 +1,11 @@
 import { css } from "@emotion/core";
 import * as config from "../../config";
 
-export const nav = css`
+export const nav = (isFixed = false) => css`
   padding: 30px;
   position: absolute;
   left: 0;
+  top: 0;
   width: 100%;
   z-index: +1;
   background: transparent;
@@ -12,6 +13,10 @@ export const nav = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: +2;
+  @media screen and (min-width: ${config.breakpoints.tablet}px) {
+    position: ${isFixed ? "fixed" : "absolute"};
+  }
 `;
 
 export const logoContainer = css`
