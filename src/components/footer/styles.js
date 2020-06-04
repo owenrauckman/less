@@ -15,7 +15,4 @@ export const wrapper = css`
   justify-content: center;
   height: 100%;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  flex-direction: column;
 `;
