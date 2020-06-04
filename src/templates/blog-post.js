@@ -31,9 +31,10 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
+      postNumber
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-        fluid(maxWidth: 1200, maxHeight: 800, resizingBehavior: SCALE) {
+        fluid(maxWidth: 1200, maxHeight: 800, resizingBehavior: FILL) {
           ...GatsbyContentfulFluid_tracedSVG
         }
       }

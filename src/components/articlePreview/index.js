@@ -21,15 +21,8 @@ export default ({ posts }) => (
                 ></div>
               </div>
               <h3 css={styles.previewTitle}>{article.node.title}</h3>
-              {/* <div
-                css={styles.previewText}
-                dangerouslySetInnerHTML={{
-                  __html: article.node.description.childMarkdownRemark.html,
-                }}
-              /> */}
               <p css={styles.previewText}>
-                A small precursor to what you are about to read. This should
-                probably never span over three lines
+                {article.node.description.description}
               </p>
             </Link>
           </li>

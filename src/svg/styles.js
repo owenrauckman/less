@@ -1,11 +1,11 @@
 import { css } from "@emotion/core";
 
-export const logo = css`
-  height: 32px;
-  width: 32px;
+export const logo = (size = 32) => css`
+  height: ${size}px;
+  width: ${size}px;
 `;
 
-export const cup = css`
+export const cup = (color = "#333") => css`
   @keyframes animate {
     to {
       transform: scaleY(0.5);
@@ -13,14 +13,14 @@ export const cup = css`
   }
   height: 100%;
   width: 100%;
-  fill: #333;
+  fill: ${color};
   transform: scaleY(1);
   transform-origin: 50% 80%;
   animation: animate 2s ease-in-out forwards;
 `;
 
-export const circle = css`
-  fill: #333;
+export const circle = (color = "#333") => css`
+  fill: ${color};
 `;
 
 export const hamburger = css`

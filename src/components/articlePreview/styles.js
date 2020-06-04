@@ -67,6 +67,7 @@ export const previewText = css`
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
 `;
 
 export const decoratorContainer = css`

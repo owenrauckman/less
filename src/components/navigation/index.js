@@ -11,9 +11,9 @@ export default () => (
       {/* <span css={styles.title}>Less</span> */}
     </Link>
     <div css={styles.hamburgerContainer}>
-      <Link to="/" css={styles.letsTalk}>
+      <a href="https://www.linkedin.com/in/owenrauckman/" css={styles.letsTalk}>
         Lets talk
-      </Link>
+      </a>
       {/* <Hamburger /> */}
     </div>
   </nav>

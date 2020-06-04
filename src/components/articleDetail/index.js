@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "gatsby";
 import Img from "gatsby-image";
 import * as styles from "./styles";
-import ArrowLeft from "../../svg/arrowLeft";
 
 export default ({ post }) => {
   return (
@@ -12,7 +10,9 @@ export default ({ post }) => {
           <h2 css={styles.featuredArticleTitle}>{post.title}</h2>
         </article>
         <div css={styles.featuredImageWrapper}>
-          <span css={styles.featuredArticleNumber}>01</span>
+          <span css={styles.featuredArticleNumber}>
+            {post.postNumber < 10 ? `0${post.postNumber}` : post.postNumber}
+          </span>
           <div css={styles.featuredImageContainer}>
             <Img
               alt=""

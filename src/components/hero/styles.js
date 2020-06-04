@@ -49,11 +49,12 @@ export const featuredArticleTitle = css`
   letter-spacing: -1px;
   font-weight: 700;
   font-size: 3.6rem;
-  line-height: 3rem;
+  line-height: 4rem;
   margin: 10px 0 0 0;
+  word-break: break-word;
   @media screen and (min-width: ${config.breakpoints.phone}px) {
     font-size: 6.4rem;
-    line-height: 6rem;
+    line-height: 7rem;
   }
 `;
 
@@ -63,6 +64,7 @@ export const featuredArticleExcerpt = css`
   font-size: 1.6rem;
   line-height: 2.8rem;
   color: rgba(0, 0, 0, 0.5);
+  margin: 20px 0;
 `;
 
 export const readMoreContainer = (isAbsolute) => css`

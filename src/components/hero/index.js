@@ -13,13 +13,9 @@ export default ({ person, posts }) => {
           <h2 css={styles.featuredArticleTitle}>
             {posts[activePost].node.title}
           </h2>
-          <div
-            css={styles.featuredArticleExcerpt}
-            dangerouslySetInnerHTML={{
-              __html:
-                posts[activePost].node.description.childMarkdownRemark.html,
-            }}
-          ></div>
+          <div css={styles.featuredArticleExcerpt}>
+            {posts[activePost].node.description.description}
+          </div>
           <Link
             to={`/blog/${posts[activePost].node.slug}`}
             css={styles.readMoreContainer(false)}
@@ -29,7 +25,11 @@ export default ({ person, posts }) => {
           </Link>
         </article>
         <div css={styles.featuredImageWrapper}>
-          <span css={styles.featuredArticleNumber}>0{activePost + 1}</span>
+          <span css={styles.featuredArticleNumber}>
+            {posts[activePost].node.postNumber < 10
+              ? `0${posts[activePost].node.postNumber}`
+              : posts[activePost].node.postNumber}
+          </span>
           <div css={styles.featuredImageContainer}>
             <Img
               alt=""

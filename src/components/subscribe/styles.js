@@ -4,7 +4,7 @@ import * as config from "../../config";
 export const wrapper = css`
   width: calc(100% - 10vmin);
   max-width: 750px;
-  margin: 10vh auto 0 auto;
+  margin: 5vh auto 0 auto;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -73,11 +73,15 @@ export const arrow = css`
   position: absolute;
   right: 15px;
   top: calc(50% + 2px);
+  background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 56 16" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h55.84v15.84H0z"/><path d="M0 6.92v2h52l-5.5 5.5 1.42 1.42 7.92-7.92L47.92 0 46.5 1.42l5.5 5.5H0z"/></svg>')
+    no-repeat;
+  background-size: 24px;
   transform: translateY(-50%);
-  & svg {
-    height: 24px;
-    width: 24px;
-  }
+  border: none;
+  width: 24px;
+  height: 24px;
+  background-position: 50% 50%;
+  cursor: pointer;
 `;
 
 export const description = css`

@@ -10,7 +10,10 @@ export const wrapper = css`
   width: calc(100% - 10vmin);
   max-width: 1180px;
   margin: 0 auto;
-  padding: 5vmin 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;

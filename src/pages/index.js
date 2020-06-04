@@ -34,22 +34,20 @@ export default RootIndex;
 
 export const pageQuery = graphql`
   query HomeQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: ASC }) {
       edges {
         node {
           title
+          postNumber
           slug
           publishDate(formatString: "MMMM Do, YYYY")
-          tags
           heroImage {
-            fluid(maxWidth: 1200, maxHeight: 800, resizingBehavior: SCALE) {
+            fluid(maxWidth: 1200, maxHeight: 800, resizingBehavior: FILL) {
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
           description {
-            childMarkdownRemark {
-              html
-            }
+            description
           }
         }
       }
